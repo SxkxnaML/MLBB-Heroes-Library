@@ -1,7 +1,15 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+}
 
 .heroImage {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
   margin-bottom: 10px;
 }
 
@@ -16,7 +24,7 @@
   color: rgba(255, 255, 255, 0.8);
   background: rgba(255, 255, 255, 0.06);
   margin: 0 auto 10px auto;
-} 
+}
 
 .heroName,
 .heroRole {

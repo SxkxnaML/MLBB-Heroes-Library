@@ -11,7 +11,7 @@ export default function HeroCard({ hero }) {
   const role = hero?.role?.trim() ? hero.role : 'Unknown role'
 
   return (
-    <div>
+    <div className={styles.card}>
       {!hasImg || imageFailed ? (
         <div className={styles.heroPlaceholder}>No image</div>
       ) : (

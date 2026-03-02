@@ -1,15 +1,12 @@
 import './App.css'
 import Header from './components/Header'
-import HeroCard from './components/HeroCard'
-import heroes from './data/data'
+import HeroList from './components/HeroList'
 
 function App() {
   return (
     <div className="main">
       <Header />
-      {heroes.map((el) => (
-        <HeroCard hero={el} key={el.id} />
-      ))}
+      <HeroList />
     </div>
   )
 }
