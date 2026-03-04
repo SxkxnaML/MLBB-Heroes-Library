@@ -3,7 +3,7 @@ const heroes = [
     id: 'hayabusa',
     name: 'Hayabusa',
     role: 'Assassin',
-    img: '../public/heroes/hayabusa.png',
+    img: 'https://i.pinimg.com/1200x/e5/6c/a7/e56ca7071d1578df2d4af271e8bba9b8.jpg',
   },
   {
     id: 'nolan',
