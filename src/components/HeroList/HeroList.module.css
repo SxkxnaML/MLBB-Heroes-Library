@@ -1,0 +1,19 @@
+.grid {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+  justify-content: center;
+  gap: 24px;
+}
+
+.heroesNotFound {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .grid {
+    width: min(100%, calc(100% - 24px));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+  }
+}

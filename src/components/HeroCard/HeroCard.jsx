@@ -18,13 +18,13 @@ export default function HeroCard({ hero }) {
         <img
           className={styles.heroImage}
           src={hero.img}
-          alt="#"
+          alt={name}
           onError={() => setImageFailed(true)}
         />
       )}
 
       <h2 className={styles.heroName}>{name}</h2>
-      <h3 className={styles.heroRole}>{role}</h3>
+      <p className={styles.heroRole}>{role}</p>
     </div>
   )
 }
