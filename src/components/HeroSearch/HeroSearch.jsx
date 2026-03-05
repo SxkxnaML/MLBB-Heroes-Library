@@ -1,6 +1,12 @@
+import RoleSelect from '../RoleSelect/RoleSelect'
 import styles from './HeroSearch.module.css'
 
-export default function HeroForm({ value, setInputData }) {
+export default function HeroSearch({
+  value,
+  setSearchHero,
+  heroRole,
+  setSelectRole,
+}) {
   return (
     <div className={styles.searchWrap}>
       <input
@@ -8,8 +14,9 @@ export default function HeroForm({ value, setInputData }) {
         type="text"
         value={value}
         placeholder="Поиск героя"
-        onChange={(e) => setInputData(e.target.value)}
+        onChange={(e) => setSearchHero(e.target.value)}
       />
+      <RoleSelect heroRole={heroRole} setHeroRole={setSelectRole} />
     </div>
   )
 }

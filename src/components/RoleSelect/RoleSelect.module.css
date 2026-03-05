@@ -1,0 +1,92 @@
+.selectWrap {
+  width: 100%;
+}
+
+.select {
+  width: 100%;
+  height: 56px;
+  padding: 0 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 18px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.select:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.07) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.select:focus {
+  border-color: #7aa2ff;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  box-shadow:
+    0 0 0 4px rgba(122, 162, 255, 0.18),
+    0 10px 24px rgba(0, 0, 0, 0.18);
+  transform: translateY(-1px);
+}
+
+.select option {
+  color: #111111;
+  background: #ffffff;
+}
+
+.selectArrow {
+  position: relative;
+}
+
+.selectArrow::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid rgba(255, 255, 255, 0.72);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.72);
+  transform: translateY(-60%) rotate(45deg);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .select {
+    height: 52px;
+    padding: 0 16px;
+    font-size: 15px;
+    border-radius: 16px;
+  }
+
+  .selectArrow::after {
+    right: 16px;
+    width: 9px;
+    height: 9px;
+  }
+}

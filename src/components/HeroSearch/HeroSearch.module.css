@@ -1,6 +1,9 @@
 .searchWrap {
   width: min(720px, calc(100% - 32px));
-  margin: 5px auto 5px auto;
+  margin: 8px auto 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .searchInput {
@@ -43,6 +46,7 @@
 @media (max-width: 768px) {
   .searchWrap {
     width: min(100%, calc(100% - 24px));
+    gap: 12px;
   }
 
   .searchInput {

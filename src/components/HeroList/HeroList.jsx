@@ -9,6 +9,6 @@ export default function HeroList({ heroes }) {
       ))}
     </div>
   ) : (
-    <span className={styles.heroesNotFound}>Heroes not found</span>
+    <div className={styles.heroesNotFound}>Heroes not found</div>
   )
 }

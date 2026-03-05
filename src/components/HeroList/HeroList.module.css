@@ -8,12 +8,24 @@
 }
 
 .heroesNotFound {
+  display: block;
+  width: min(720px, calc(100% - 32px));
+  margin: 18px auto 0;
   text-align: center;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 18px;
+  font-weight: 600;
 }
+
 @media (max-width: 768px) {
   .grid {
     width: min(100%, calc(100% - 24px));
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 18px;
+  }
+
+  .heroesNotFound {
+    width: min(100%, calc(100% - 24px));
+    font-size: 16px;
   }
 }

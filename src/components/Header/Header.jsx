@@ -5,7 +5,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.inner}>
         <div className={styles.brand}>
-          <img className={styles.logo} src={logo} alt="mlbb-logo" />
+          <img className={styles.logo} src={logo} alt="mlbb-library-logo" />
 
           <div className={styles.textBox}>
             <h1 className={styles.topHeading}>Mobile Legends Hero Library</h1>

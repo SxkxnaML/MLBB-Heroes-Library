@@ -38,4 +38,45 @@ body {
   gap: 28px;
   justify-content: flex-start;
   padding-bottom: 40px;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* кастомный скроллбар для main (Chromium/Edge/Safari) */
+.main::-webkit-scrollbar {
+  width: 12px;
+}
+
+.main::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07);
+}
+
+.main::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    #bdd0ff 0%,
+    #86a3ff 35%,
+    #5c79f3 70%,
+    #3e56d1 100%
+  );
+  border: 3px solid rgba(5, 8, 36, 0.95);
+  background-clip: padding-box;
+  box-shadow: 0 10px 22px rgba(90, 130, 255, 0.35);
+  min-height: 60px;
+}
+
+.main::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Firefox (частично) */
+.main {
+  scrollbar-width: thin;
+  scrollbar-color: #86a3ff rgba(255, 255, 255, 0.06);
 }

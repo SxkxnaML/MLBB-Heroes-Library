@@ -20,7 +20,7 @@ const heroes = [
   {
     id: 'gloo',
     name: 'Gloo',
-    role: 'Fighter',
+    role: 'Tank',
     img: 'https://i.pinimg.com/736x/54/85/c7/5485c7872e5edd62458ee5acb77de4b8.jpg',
   },
   {
@@ -62,7 +62,7 @@ const heroes = [
   {
     id: 'gusion',
     name: 'Gusion',
-    role: 'Assassin',
+    role: 'Assassin/Mage',
     img: 'https://i.pinimg.com/736x/d9/13/e0/d913e0951ef37ba1f028d2173f8253bb.jpg',
   },
   {
@@ -70,6 +70,36 @@ const heroes = [
     name: 'Chip',
     role: 'Tank',
     img: 'https://i.pinimg.com/736x/dd/7f/3e/dd7f3eb53963f616f1f8505b7636e12c.jpg',
+  },
+  {
+    id: 'kimmy',
+    name: 'Kimmy',
+    role: 'Mage/Marksman',
+    img: 'https://i.pinimg.com/736x/d1/a8/7a/d1a87ac12a28a52220a0c0f946a35321.jpg',
+  },
+  {
+    id: 'eudora',
+    name: 'Eudora',
+    role: 'Mage',
+    img: 'https://i.pinimg.com/736x/9f/21/49/9f214980a3679aa4a82bb5368d0b96cf.jpg',
+  },
+  {
+    id: 'pakito',
+    name: 'Pakito',
+    role: 'Fighter',
+    img: 'https://i.pinimg.com/736x/46/3b/14/463b142675058af310f0442109c863c3.jpg',
+  },
+  {
+    id: 'estes',
+    name: 'Estes',
+    role: 'Support',
+    img: 'https://i.pinimg.com/736x/fa/22/f4/fa22f402055d727541a9588caf592338.jpg',
+  },
+  {
+    id: 'rafaela',
+    name: 'Rafaela',
+    role: 'Support',
+    img: 'https://i.pinimg.com/736x/58/0f/20/580f20bc470127616865c1f3286e498d.jpg',
   },
 ]
 
