@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './HeroCard.module.css'
 import { useState } from 'react'
 
@@ -11,20 +12,24 @@ export default function HeroCard({ hero }) {
   const role = hero?.role?.trim() ? hero.role : 'Unknown role'
 
   return (
-    <div className={styles.card}>
-      {!hasImg || imageFailed ? (
-        <div className={styles.heroPlaceholder}>No image</div>
-      ) : (
-        <img
-          className={styles.heroImage}
-          src={hero.img}
-          alt={name}
-          onError={() => setImageFailed(true)}
-        />
-      )}
+    <Link to={`/hero/${hero.id}`} className={styles.cardLink}>
+      <article className={styles.card}>
+        <div className={styles.card}>
+          {!hasImg || imageFailed ? (
+            <div className={styles.heroPlaceholder}>No image</div>
+          ) : (
+            <img
+              className={styles.heroImage}
+              src={hero.img}
+              alt={name}
+              onError={() => setImageFailed(true)}
+            />
+          )}
 
-      <h2 className={styles.heroName}>{name}</h2>
-      <p className={styles.heroRole}>{role}</p>
-    </div>
+          <h2 className={styles.heroName}>{name}</h2>
+          <p className={styles.heroRole}>{role}</p>
+        </div>
+      </article>
+    </Link>
   )
 }

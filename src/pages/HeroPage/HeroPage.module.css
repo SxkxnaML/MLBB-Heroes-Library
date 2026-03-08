@@ -1,0 +1,159 @@
+.heroPage {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0 40px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 0.82;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.backLink:hover {
+  opacity: 1;
+  transform: translateX(-2px);
+}
+
+.heroLayout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.imageBox {
+  border-radius: 22px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
+.heroImage {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+.infoBox {
+  padding: 24px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+}
+
+.heroName {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 1.1;
+}
+
+.heroRole {
+  margin: 0 0 20px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.metaList {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.metaItem {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.metaLabel {
+  color: rgba(255, 255, 255, 0.62);
+  font-weight: 600;
+}
+
+.metaValue {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.description {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.notFound {
+  width: min(700px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 60px 0 40px;
+  text-align: center;
+}
+
+.notFoundTitle {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: 36px;
+}
+
+.notFoundText {
+  margin: 0 0 24px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  .heroLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .heroName {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroPage {
+    width: min(100%, calc(100% - 24px));
+    padding: 18px 0 32px;
+  }
+
+  .infoBox {
+    padding: 18px;
+  }
+
+  .heroName {
+    font-size: 28px;
+  }
+
+  .heroRole {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .notFound {
+    width: min(100%, calc(100% - 24px));
+    padding: 48px 0 32px;
+  }
+
+  .notFoundTitle {
+    font-size: 30px;
+  }
+}

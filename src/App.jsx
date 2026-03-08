@@ -1,34 +1,20 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+import HomePage from './pages/HomePage/HomePage.jsx'
 import Header from './components/Header/Header.jsx'
-import HeroSearch from './components/HeroSearch/HeroSearch.jsx'
-import HeroList from './components/HeroList/HeroList.jsx'
-import heroes from './data/heroes.mock'
-import { useState } from 'react'
+import HeroPage from './pages/HeroPage/HeroPage.jsx'
 
 function App() {
-  const [searchHero, setSearchHero] = useState('')
-
-  const [selectRole, setSelectRole] = useState('All')
-
-  const normalString = searchHero.trim().toLowerCase()
-
-  const filteredHeroArray = heroes.filter((el) => {
-    const matchName = el.name.toLowerCase().includes(normalString)
-    const matchRole = selectRole === 'All' || el.role.includes(selectRole)
-    return matchName && matchRole
-  })
-
   return (
-    <div className="main">
-      <Header />
-      <HeroSearch
-        value={searchHero}
-        setSearchHero={setSearchHero}
-        heroRole={selectRole}
-        setSelectRole={setSelectRole}
-      />
-      <HeroList heroes={filteredHeroArray} />
-    </div>
+    <BrowserRouter>
+      <div className="main">
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="hero/:id" element={<HeroPage />}></Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
   )
 }
 
